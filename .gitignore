@@ -16,3 +16,6 @@ ENV/
 
 # Logs and local databases
 *.log
+
+# Local configurations with sensitive credentials
+config/settings.json
