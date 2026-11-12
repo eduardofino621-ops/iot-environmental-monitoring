@@ -1,0 +1,22 @@
+{
+  "mqtt": {
+    "broker_ip": "10.6.1.10",
+    "port": 1883,
+    "keepalive": 60,
+    "topic_prefix": "grupoX"
+  },
+  "simulation": {
+    "interval_seconds": 5,
+    "rooms": [
+      "classroomA",
+      "classroomB",
+      "lab1"
+    ]
+  },
+  "influxdb": {
+    "url": "https://us-east-1-1.aws.cloud2.influxdata.com",
+    "token": "YOUR_INFLUXDB_TOKEN_HERE",
+    "org": "YOUR_ORGANIZATION_HERE",
+    "bucket": "iot_monitoring"
+  }
+}
