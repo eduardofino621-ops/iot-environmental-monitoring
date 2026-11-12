@@ -1,21 +1,31 @@
 # IoT Environmental Monitoring and Data Analytics Platform
 
-> Project developed for the **Sensing and Actuation Networks and Systems** course[cite: 2] at the **University of Coimbra (DEI)**[cite: 1].
+> Project developed for the **Sensing and Actuation Networks and Systems** course at the **University of Coimbra (DEI)**.
 
 ## 🏗️ Architecture Overview
-This system simulates an IoT-based environmental monitoring platform across multiple rooms[cite: 2, 4]. 
-- **Sensor Nodes**: Simulate environmental data (Temperature, Humidity, $, Light, VOCs, Occupancy) and publish via **MQTT**[cite: 3, 4, 6].
-- **MQTT Broker**: Central message broker (Mosquitto) handling telemetry[cite: 3, 4].
-- **Gateway**: Python application processing incoming MQTT messages, driving HVAC control logic, and persisting data[cite: 3, 4].
-- **Storage & Visualization**: Time-series data stored in **InfluxDB Cloud** and visualised via **Grafana Cloud** dashboards[cite: 3, 5, 6].
+This system simulates an IoT-based environmental monitoring platform across multiple rooms. 
+- **Sensor Nodes**: Simulate environmental data (Temperature, Humidity, $\text{CO}_2$, Light, VOCs, Occupancy) and publish via **MQTT**.
+- **MQTT Broker**: Central message broker (Mosquitto) handling telemetry.
+- **Gateway**: Python application processing incoming MQTT messages, driving HVAC control logic, and persisting data.
+- **Storage & Visualization**: Time-series data stored in **InfluxDB Cloud** and visualised via **Grafana Cloud** dashboards.
 
 ## 🚀 Project Structure
 - src/: Core Python scripts (sensor.py, gateway.py, hvac.py, debugger.py).
-- docs/: Project documentation and reports[cite: 7].
+- docs/: Project documentation and reports.
 - config/: Configuration files and environment templates.
 
+## 📊 Monitored Variables (Table I Reference)
+| Variable | Unit |
+| :--- | :--- |
+| Temperature | °C |
+| Humidity | % |
+| $\text{CO}_2$ | ppm |
+| Light intensity | lux |
+| Air quality (VOC) | ppb |
+| Occupancy | Binary (0/1) |
+
 ## 🛠️ Tech Stack
-- **Languages:** Python[cite: 2]
-- **Protocols:** MQTT (Mosquitto)[cite: 2, 4]
-- **Database:** InfluxDB Cloud[cite: 3, 5]
-- **Visualization:** Grafana Cloud[cite: 3, 6]
+- **Languages:** Python
+- **Protocols:** MQTT (Mosquitto)
+- **Database:** InfluxDB Cloud
+- **Visualization:** Grafana Cloud
